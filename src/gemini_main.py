@@ -4,11 +4,12 @@ import textwrap
 import google.generativeai as genai
 
 
-GOOGLE_API_KEY = st.secrets['GOOGLE_API_KEY']
-genai.configure(api_key=GOOGLE_API_KEY)
+# GOOGLE_API_KEY = st.secrets['GOOGLE_API_KEY']
+# genai.configure(api_key=GOOGLE_API_KEY)
 
 # Title
 st.title("Google-Gemini chatbot app")
+st.warning("For Image input, Please Select Google gemini-pro-vision model")
 
 # Input text box
 input_text = st.text_input("Enter your prompt:")
@@ -26,7 +27,7 @@ gp_model = genai.GenerativeModel(selected_model)
 output_text = st.empty()
 
 if st.button("Run model"):
-    # Access input text and image data
+    # Access inpugit t text and image data
     text_data = input_text
     image_data = img
 
