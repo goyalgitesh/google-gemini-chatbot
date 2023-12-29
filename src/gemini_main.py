@@ -4,7 +4,7 @@ import textwrap
 import google.generativeai as genai
 
 
-GOOGLE_API_KEY = "AIzaSyCPo_nFYDY-Y1MFQBqxzGMG2u4wyGcPR_o"
+GOOGLE_API_KEY = st.secrets['GOOGLE_API_KEY']
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Title
